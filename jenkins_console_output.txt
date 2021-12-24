@@ -1,0 +1,104 @@
+Started by user Manar Bedeir
+Running as SYSTEM
+Building in workspace C:\data\jenkins_home\workspace\Jenkins_Newman_Test
+[Jenkins_Newman_Test] $ cmd /c call C:\Users\Manar\AppData\Local\Temp\jenkins9349917158863910611.bat
+
+C:\data\jenkins_home\workspace\Jenkins_Newman_Test>newman run C:\Users\Manar\Desktop\user.postman_collection.json --suppress-exit-code 1 
+newman
+
+user
+
+→ createWithArray
+  POST https://petstore.swagger.io/v2/user/createWithArray [200 OK, 370B, 1128ms]
+  √  Successful Operatin
+
+→ createWithList
+  POST https://petstore.swagger.io/v2/user/createWithList [200 OK, 370B, 160ms]
+  √  Successful operation
+
+→ Get user by username
+  GET https://petstore.swagger.io/v2/user/username?username=username [404 Not Found, 385B, 156ms]
+  1. Successful Operation
+  √  user not found
+  2. Invalid user supplied
+
+→ Update User
+  PUT https://petstore.swagger.io/v2/user/username?username=username [200 OK, 387B, 157ms]
+  3. user not found
+  4. Invalid user supplied
+
+→ Delete user
+  DELETE https://petstore.swagger.io/v2/user/username?username=username [404 Not Found, 292B, 277ms]
+  √  user not found
+  5. Invalid user supplied
+
+→ log user into system
+  GET https://petstore.swagger.io/v2/user/login?user-name=username&password=password [200 OK, 471B, 226ms]
+  √  Successful operation
+  6. invalid user name or password supplied
+
+→ log out
+  GET https://petstore.swagger.io/v2/user/logout [200 OK, 370B, 234ms]
+  √  Successful Operation
+
+→ CreateUser
+  POST https://petstore.swagger.io/v2/user/user [405 Method Not Allowed, 436B, 423ms]
+  7. Successful operation
+
+┌─────────────────────────┬─────────────────────┬─────────────────────┐
+│                         │            executed │              failed │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│              iterations │                   1 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│                requests │                   8 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│            test-scripts │                  16 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│      prerequest-scripts │                   8 │                   0 │
+├─────────────────────────┼─────────────────────┼─────────────────────┤
+│              assertions │                  13 │                   7 │
+├─────────────────────────┴─────────────────────┴─────────────────────┤
+│ total run duration: 3.6s                                            │
+├─────────────────────────────────────────────────────────────────────┤
+│ total data received: 425B (approx)                                  │
+├─────────────────────────────────────────────────────────────────────┤
+│ average response time: 345ms [min: 156ms, max: 1128ms, s.d.: 307ms] │
+└─────────────────────────────────────────────────────────────────────┘
+
+  #  failure         detail                                                
+                                                                           
+ 1.  AssertionError  Successful Operation                                  
+                     expected response to have status code 200 but got 404 
+                     at assertion:0 in test-script                         
+                     inside "Get user by username"                         
+                                                                           
+ 2.  AssertionError  Invalid user supplied                                 
+                     expected response to have status code 400 but got 404 
+                     at assertion:2 in test-script                         
+                     inside "Get user by username"                         
+                                                                           
+ 3.  AssertionError  user not found                                        
+                     expected response to have status code 404 but got 200 
+                     at assertion:0 in test-script                         
+                     inside "Update User"                                  
+                                                                           
+ 4.  AssertionError  Invalid user supplied                                 
+                     expected response to have status code 400 but got 200 
+                     at assertion:1 in test-script                         
+                     inside "Update User"                                  
+                                                                           
+ 5.  AssertionError  Invalid user supplied                                 
+                     expected response to have status code 400 but got 404 
+                     at assertion:1 in test-script                         
+                     inside "Delete user"                                  
+                                                                           
+ 6.  AssertionError  invalid user name or password supplied                
+                     expected response to have status code 400 but got 200 
+                     at assertion:1 in test-script                         
+                     inside "log user into system"                         
+                                                                           
+ 7.  AssertionError  Successful operation                                  
+                     expected response to have status code 200 but got 405 
+                     at assertion:0 in test-script                         
+                     inside "CreateUser"                                   
+Finished: SUCCESS
