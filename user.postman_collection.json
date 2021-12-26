@@ -12,8 +12,11 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Successful Operatin\", function () {\r",
+							"pm.test(\"Successful Operation\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
 							"});\r",
 							""
 						],
@@ -26,7 +29,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "[\r\n  {\r\n    \"id\": 0,\r\n    \"username\": \"string\",\r\n    \"firstName\": \"string\",\r\n    \"lastName\": \"string\",\r\n    \"email\": \"string\",\r\n    \"password\": \"string\",\r\n    \"phone\": \"string\",\r\n    \"userStatus\": 0\r\n  }\r\n]",
+					"raw": "[\r\n  {\r\n    \"id\": 0,\r\n    \"username\": \"SilaA\",\r\n    \"firstName\": \"sila\",\r\n    \"lastName\": \"ahmed\",\r\n    \"email\": \"sila@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"phone\": \"01022554484\",\r\n    \"userStatus\": 0\r\n  }\r\n]",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -55,7 +58,9 @@
 							"pm.test(\"Successful operation\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
-							""
+							"pm.test(\"Response time is less than 3000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(3000);\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -66,7 +71,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "[\r\n  {\r\n    \"id\": 0,\r\n    \"username\": \"string\",\r\n    \"firstName\": \"string\",\r\n    \"lastName\": \"string\",\r\n    \"email\": \"string\",\r\n    \"password\": \"string\",\r\n    \"phone\": \"string\",\r\n    \"userStatus\": 0\r\n  }\r\n]",
+					"raw": "[\r\n  {\r\n    \"id\": 0,\r\n    \"username\": \"Ahmed1\",\r\n    \"firstName\": \"Ahmed\",\r\n    \"lastName\": \"Mohamed\",\r\n    \"email\": \"Ahmed@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"phone\": \"0104668683\",\r\n    \"userStatus\": 0\r\n  }\r\n]",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -100,6 +105,9 @@
 							"});\r",
 							"pm.test(\"Invalid user supplied\", function () {\r",
 							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 3000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(3000);\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -122,18 +130,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{user-url}}/username?username=username",
+					"raw": "{{user-url}}/Ahmed1",
 					"host": [
 						"{{user-url}}"
 					],
 					"path": [
-						"username"
-					],
-					"query": [
-						{
-							"key": "username",
-							"value": "username"
-						}
+						"Ahmed1"
 					]
 				}
 			},
@@ -151,6 +153,9 @@
 							"});\r",
 							"pm.test(\"Invalid user supplied\", function () {\r",
 							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 3000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(3000);\r",
 							"});\r",
 							""
 						],
@@ -171,7 +176,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{user-url}}/username?username=username",
+					"raw": "{{user-url}}/username?username=Ahmed2",
 					"host": [
 						"{{user-url}}"
 					],
@@ -181,7 +186,7 @@
 					"query": [
 						{
 							"key": "username",
-							"value": "username"
+							"value": "Ahmed2"
 						}
 					]
 				}
@@ -200,6 +205,9 @@
 							"});\r",
 							"pm.test(\"Invalid user supplied\", function () {\r",
 							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 3000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(3000);\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -210,18 +218,12 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{user-url}}/username?username=username",
+					"raw": "{{user-url}}/Ahmed1",
 					"host": [
 						"{{user-url}}"
 					],
 					"path": [
-						"username"
-					],
-					"query": [
-						{
-							"key": "username",
-							"value": "username"
-						}
+						"Ahmed1"
 					]
 				}
 			},
@@ -240,6 +242,9 @@
 							"\r",
 							"pm.test(\"invalid user name or password supplied\", function () {\r",
 							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 3000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(3000);\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -261,7 +266,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{user-url}}/login?user-name=username&password=password",
+					"raw": "{{user-url}}/login?user-name=Ahmed1&password=12345678",
 					"host": [
 						"{{user-url}}"
 					],
@@ -271,11 +276,11 @@
 					"query": [
 						{
 							"key": "user-name",
-							"value": "username"
+							"value": "Ahmed1"
 						},
 						{
 							"key": "password",
-							"value": "password"
+							"value": "12345678"
 						}
 					]
 				}
@@ -291,6 +296,9 @@
 						"exec": [
 							"pm.test(\"Successful Operation\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 3000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(3000);\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -321,6 +329,9 @@
 						"exec": [
 							"pm.test(\"Successful operation\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 3000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(3000);\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -332,7 +343,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"id\": 0,\r\n  \"username\": \"string\",\r\n  \"firstName\": \"string\",\r\n  \"lastName\": \"string\",\r\n  \"email\": \"string\",\r\n  \"password\": \"string\",\r\n  \"phone\": \"string\",\r\n  \"userStatus\": 0\r\n}",
+					"raw": " {\r\n    \"id\": 0,\r\n    \"username\": \"Ahmed1\",\r\n    \"firstName\": \"Ahmed\",\r\n    \"lastName\": \"Mohamed\",\r\n    \"email\": \"Ahmed@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"phone\": \"0104668683\",\r\n    \"userStatus\": 0\r\n  }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -340,12 +351,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{user-url}}/user",
+					"raw": "{{user-url}}",
 					"host": [
 						"{{user-url}}"
-					],
-					"path": [
-						"user"
 					]
 				}
 			},
