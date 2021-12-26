@@ -1,0 +1,344 @@
+{
+	"id": "9dce0b68-89e1-419b-a7bd-d9d16a8a7526",
+	"name": "user",
+	"timestamp": "2021-12-26T10:11:19.602Z",
+	"collection_id": "13138888-c879e848-f43c-4b71-920b-615b1e8e7644",
+	"folder_id": 0,
+	"environment_id": "b90248a7-23cf-45ef-99e6-56dfea791e8f",
+	"totalPass": 15,
+	"totalFail": 6,
+	"results": [
+		{
+			"id": "1ba68dd7-3499-4a93-8b14-d73e7e091489",
+			"name": "createWithArray",
+			"url": "https://petstore.swagger.io/v2/user/createWithArray",
+			"time": 568,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Successful Operation": true,
+				"Response time is less than 2000ms": true
+			},
+			"testPassFailCounts": {
+				"Successful Operation": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 2000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				568
+			],
+			"allTests": [
+				{
+					"Successful Operation": true,
+					"Response time is less than 2000ms": true
+				}
+			]
+		},
+		{
+			"id": "1ad8148a-19e5-40b1-b7d5-92855939b81e",
+			"name": "createWithList",
+			"url": "https://petstore.swagger.io/v2/user/createWithList",
+			"time": 169,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Successful operation": true,
+				"Response time is less than 3000ms": true
+			},
+			"testPassFailCounts": {
+				"Successful operation": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 3000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				169
+			],
+			"allTests": [
+				{
+					"Successful operation": true,
+					"Response time is less than 3000ms": true
+				}
+			]
+		},
+		{
+			"id": "4b2a197e-ffe4-4cdd-9e7f-764b27d50d92",
+			"name": "Get user by username",
+			"url": "https://petstore.swagger.io/v2/user/Ahmed1",
+			"time": 165,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Successful Operation": false,
+				"user not found": true,
+				"Invalid user supplied": false,
+				"Response time is less than 3000ms": true
+			},
+			"testPassFailCounts": {
+				"Successful Operation": {
+					"pass": 0,
+					"fail": 1
+				},
+				"user not found": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Invalid user supplied": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 3000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				165
+			],
+			"allTests": [
+				{
+					"Successful Operation": false,
+					"user not found": true,
+					"Invalid user supplied": false,
+					"Response time is less than 3000ms": true
+				}
+			]
+		},
+		{
+			"id": "5fc2669a-d6e3-4a40-9235-1ae760beaffe",
+			"name": "Update User",
+			"url": "https://petstore.swagger.io/v2/user/username?username=Ahmed2",
+			"time": 169,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"user not found": false,
+				"Invalid user supplied": false,
+				"Response time is less than 3000ms": true
+			},
+			"testPassFailCounts": {
+				"user not found": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Invalid user supplied": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 3000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				169
+			],
+			"allTests": [
+				{
+					"user not found": false,
+					"Invalid user supplied": false,
+					"Response time is less than 3000ms": true
+				}
+			]
+		},
+		{
+			"id": "7d3fe281-40e8-48e8-842f-c399c9b5e9f4",
+			"name": "Delete user",
+			"url": "https://petstore.swagger.io/v2/user/Ahmed1",
+			"time": 166,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"user not found": true,
+				"Invalid user supplied": false,
+				"Response time is less than 3000ms": true
+			},
+			"testPassFailCounts": {
+				"user not found": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Invalid user supplied": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 3000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				166
+			],
+			"allTests": [
+				{
+					"user not found": true,
+					"Invalid user supplied": false,
+					"Response time is less than 3000ms": true
+				}
+			]
+		},
+		{
+			"id": "df479313-ef7a-4d2d-83fc-9d91468a77c1",
+			"name": "log user into system",
+			"url": "https://petstore.swagger.io/v2/user/login?user-name=Ahmed1&password=12345678",
+			"time": 168,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Successful operation": true,
+				"invalid user name or password supplied": false,
+				"Response time is less than 3000ms": true
+			},
+			"testPassFailCounts": {
+				"Successful operation": {
+					"pass": 1,
+					"fail": 0
+				},
+				"invalid user name or password supplied": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 3000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				168
+			],
+			"allTests": [
+				{
+					"Successful operation": true,
+					"invalid user name or password supplied": false,
+					"Response time is less than 3000ms": true
+				}
+			]
+		},
+		{
+			"id": "ee513761-af4c-472a-827e-ff35155466c4",
+			"name": "log out",
+			"url": "https://petstore.swagger.io/v2/user/logout",
+			"time": 165,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Successful Operation": true,
+				"Response time is less than 3000ms": true
+			},
+			"testPassFailCounts": {
+				"Successful Operation": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 3000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				165
+			],
+			"allTests": [
+				{
+					"Successful Operation": true,
+					"Response time is less than 3000ms": true
+				}
+			]
+		},
+		{
+			"id": "79a0d0ac-ae18-45a4-88fc-05bf1d2460c8",
+			"name": "CreateUser",
+			"url": "https://petstore.swagger.io/v2/user",
+			"time": 169,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Successful operation": true,
+				"Response time is less than 3000ms": true
+			},
+			"testPassFailCounts": {
+				"Successful operation": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 3000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				169
+			],
+			"allTests": [
+				{
+					"Successful operation": true,
+					"Response time is less than 3000ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1739,
+	"collection": {
+		"requests": [
+			{
+				"id": "1ba68dd7-3499-4a93-8b14-d73e7e091489",
+				"method": "POST"
+			},
+			{
+				"id": "1ad8148a-19e5-40b1-b7d5-92855939b81e",
+				"method": "POST"
+			},
+			{
+				"id": "4b2a197e-ffe4-4cdd-9e7f-764b27d50d92",
+				"method": "GET"
+			},
+			{
+				"id": "5fc2669a-d6e3-4a40-9235-1ae760beaffe",
+				"method": "PUT"
+			},
+			{
+				"id": "7d3fe281-40e8-48e8-842f-c399c9b5e9f4",
+				"method": "DELETE"
+			},
+			{
+				"id": "df479313-ef7a-4d2d-83fc-9d91468a77c1",
+				"method": "GET"
+			},
+			{
+				"id": "ee513761-af4c-472a-827e-ff35155466c4",
+				"method": "GET"
+			},
+			{
+				"id": "79a0d0ac-ae18-45a4-88fc-05bf1d2460c8",
+				"method": "POST"
+			}
+		]
+	}
+}
